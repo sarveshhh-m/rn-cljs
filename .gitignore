@@ -1,36 +1,47 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Node Modules
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Expo
-.expo/
-dist/
-web-build/
-expo-env.d.ts
+# Build & Dependencies
+/.expo/
+/.expo-shared/
+/dist/
+/target/
+/out/
+/shadow-cljs.edn.bak
+/.cpcache/
+/.clj-kondo/
+/cljs-runtime/
 
-# Native
-*.orig.*
-*.jks
-*.p8
-*.p12
-*.key
-*.mobileprovision
-
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
+# macOS & System Files
 .DS_Store
-*.pem
+Thumbs.db
 
-# local env files
-.env*.local
+# Editor & IDE Files
+.vscode/
+.idea/
+*.iml
 
-# typescript
-*.tsbuildinfo
+# Logs & Cache
+*.log
+*.cache
+/.metro-bundler-cache/
+/.babelrc.bak/
+
+# Expo & React Native Specific
+.expo/
+.expo-shared/
+ios/build/
+android/app/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+
+# Shadow-CLJS Output
+/public/js/
+cljs-out/
+shadow-cljs.edn.bak
+/.shadow-cljs/
+expo-cljs/

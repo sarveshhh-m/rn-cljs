@@ -1,8 +1,9 @@
-import { registerRootComponent } from 'expo';
+import { registerRootComponent } from "expo";
+import "./expo-cljs/index";
 
-import App from './App';
-
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+if (global.demo?.core?.init) {
+  console.log("✅ Calling demo.core.init()");
+  registerRootComponent(global.demo.core.init);
+} else {
+  console.error("❌ demo.core.init is undefined!");
+}
